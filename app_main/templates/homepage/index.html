@@ -1,0 +1,16 @@
+{% extends 'base/base.html' %}
+{% block title %} HOMEPAGE {% endblock%}
+{% block content %}
+
+
+
+
+<div class="form-control">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form_donation.as_p }}
+        <input type="submit" value="ثبت">
+    </form>
+</div>
+
+{% endblock %}
