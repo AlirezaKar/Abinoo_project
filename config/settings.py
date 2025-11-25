@@ -30,7 +30,7 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     '.onrender.com',  # Allow all Render subdomains
-    'your-custom-domain.com',  # Your custom domain if you have one
+    'https://abinoo.onrender.com',  # Your custom domain if you have one
 ]
 
 
