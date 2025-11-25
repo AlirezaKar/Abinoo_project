@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
-# Exit on error
 set -o errexit
 
-# Modify this line as needed for your project
+# Install dependencies
 pip install -r requirements.txt
 
-# Convert static asset files
+# Create static files
 python manage.py collectstatic --no-input
 
-# Apply any outstanding database migrations
+# Apply database migrations
 python manage.py migrate
+
+echo "✅ Build completed successfully!"
