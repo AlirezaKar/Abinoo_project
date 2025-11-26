@@ -44,7 +44,7 @@ class Donation(models.Model):
     donor_type = models.CharField(max_length=20, choices=DonorType.choices, default=DonorType.Individual, verbose_name='اهدا کننده')
     message = models.TextField(null=True, verbose_name='توضیحات')
     # anonymize_donation = models.BooleanField(default=AnonymizeDonation.NO, choices=AnonymizeDonation.choices, verbose_name='ناشناس')
-    anonymize_donation = models.CharField(default=False,choices=[(True, 'بله'),(False, 'خیر')],verbose_name='ناشناس')
+    anonymize_donation = models.CharField(max_length=5, default=False,choices=[(True, 'بله'),(False, 'خیر')],verbose_name='ناشناس')
 
 
     def __str__(self):
