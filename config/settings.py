@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 import os
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -21,17 +22,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-$_n%gktl(3!utzvs12y(ouwz!a_xhdnq1ec9+1%n49e#3%*w$4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG=True
+SECRET_KEY= 'django-insecure-$_n%gktl(3!utzvs12y(ouwz!a_xhdnq1ec9+1%n49e#3%*w$4'
 
-ALLOWED_HOSTS = [
-    'localhost',
-    '127.0.0.1',
-    '.onrender.com',  # Allow all Render subdomains
-    'https://abinoo.onrender.com',  # Your custom domain if you have one
-]
+
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -138,6 +135,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'app_main.User'
 
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+X_FRAME_OPTIONS = 'DENY'
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = True
 
 TINYMCE_DEFAULT_CONFIG = {
     "height": "320px",
@@ -153,3 +156,12 @@ TINYMCE_DEFAULT_CONFIG = {
     "custom_undo_redo_levels": 10,
     "language": "en_EN",
 }
+
+
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1:8000',
+    '.onrender.com',    
+    'abinoo.onrender.com',
+    'www.abinoo.onrender.com',
+]
