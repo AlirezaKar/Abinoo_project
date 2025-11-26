@@ -10,4 +10,4 @@ class DonationForm(forms.Form):
     donation_type = forms.ChoiceField(required=True, label="شیوه کمک*", choices=Donation.DonationType.choices, widget=forms.Select)
     donation_amount = forms.IntegerField(label='مقدار کمک', widget=forms.NumberInput)
     message = forms.CharField(max_length=1000, required=False, label='توضیحات', widget=forms.Textarea)
-    anonymize_donation = forms.ChoiceField(label='ناشناس', required=False, choices=Donation.AnonymizeDonation.choices, widget=forms.Select)
+    anonymize_donation = forms.BooleanField(label='ناشناس', required=False)

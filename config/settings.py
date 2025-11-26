@@ -135,13 +135,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'app_main.User'
 
-SECURE_BROWSER_XSS_FILTER = True
-SECURE_CONTENT_TYPE_NOSNIFF = True
-X_FRAME_OPTIONS = 'DENY'
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
-SECURE_SSL_REDIRECT = True
-
 TINYMCE_DEFAULT_CONFIG = {
     "height": "320px",
     "width": "960px",
@@ -160,8 +153,6 @@ TINYMCE_DEFAULT_CONFIG = {
 
 ALLOWED_HOSTS = [
     'localhost',
-    '127.0.0.1:8000',
-    '.onrender.com',    
-    'abinoo.onrender.com',
-    'www.abinoo.onrender.com',
+    '127.0.0.1',
+    'Reza06AliKalaie.pythonanywhere.com',
 ]
